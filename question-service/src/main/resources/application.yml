@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/quizAppDB
+    username: postgres
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  application:
+    name: question-service
+
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect

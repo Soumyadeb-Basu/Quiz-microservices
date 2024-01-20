@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/quizDB
+    username: postgres
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  application:
+    name: quiz-service
+
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 8081
