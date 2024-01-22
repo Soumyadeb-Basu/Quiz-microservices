@@ -4,10 +4,16 @@ spring:
 
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lowerCaseServiceId: true
+
+      routes[0]:
+        id: QUIZ-SERVICE
+        uri: lb://QUIZ-SERVICE
+        predicates[0]: Path= /quiz/**
+
+      routes[1]:
+        id: QUESTION-SERVICE
+        uri: lb://QUESTION-SERVICE
+        predicates[0]: Path= /questions/**
 
 server:
   port: 8091
